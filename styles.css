@@ -4,6 +4,8 @@
 
 body {
     background: linear-gradient(to right, #00AAFF, #00FF6C);
+    margin: 0;
+    padding: 0;
 }
 
 /* Utility class */
@@ -28,7 +30,7 @@ body {
     justify-content: space-around;
     grid-column: 1 / -1;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
     color: white;
 }
 
