@@ -58,11 +58,18 @@ class Calculator {
        
    }
 
-   updateDisplay () {
-    this.currentOperandTextElement.innerText = this.currentOperand
-    this.previousOperandTextElement.innerText = this.previousOperand
+   getDisplayNumber(number) {
+    const floatNumber = parseFloat(number)
+    if (isNaN(floatNumber)) return ''
+    return floatNumber.toLocaleString('en')
    }
 
+   updateDisplay () {
+        this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
+        if (this.operator != null) {
+        this.previousOperandTextElement.innerText = `${getDisplayNumber(this.previousOperand)} ${this.operator}`
+        }   
+    }
 };
 
 const numbersButtons = document.querySelectorAll('[data-numbers]');
